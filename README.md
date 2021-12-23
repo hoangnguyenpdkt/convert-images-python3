@@ -64,4 +64,4 @@ for infile in file_list:
 	./convert_images.py
 ```
 
-Copyright: Google IT Automation with Python Professional Certificate
+Lab-1: Automating Real-World Tasks, Google IT Automation with Python Professional Certificate
