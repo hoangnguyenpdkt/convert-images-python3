@@ -48,7 +48,7 @@ for infile in file_list:
     if infile != outfile:
         try:
             with Image.open(infile) as im:
-		#JPG do not support transparency, we have to convert to RGB to discard transparency first
+		#JPG does not support transparency, we have to convert to RGB to discard transparency first
                 im.convert("RGB").rotate(90).resize((128,128)).save(outfile,"JPEG")
         except OSError:
             print("cannot convert", infile)
