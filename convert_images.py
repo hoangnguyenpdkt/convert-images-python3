@@ -2,8 +2,9 @@
 import PIL
 import os, sys
 from PIL import Image
-dir="/home/nguyenpham/images"
-#new_dir="/home/nguyenpham/icons"
+
+dir="Images directory path"
+
 file_list=[]
 
 for filename in os.listdir(dir):
