@@ -1,6 +1,8 @@
-#Introduction
+# Introduction
+
 Your company is in the process of updating its website, and they've hired a design contractor to create some new icon graphics for the site. But the contractor has delivered the final designs in the wrong format -- rotated 90° and too large. Oof! You're not able to get in contact with the designers and your own deadline is approaching fast. You'll need to use Python to get these images ready for launch.
-##What you’ll do
+## What you’ll do
+
 Use the Python Imaging Library to do the following to a batch of images:
 
 	Open an image
@@ -10,14 +12,16 @@ Use the Python Imaging Library to do the following to a batch of images:
 	Resize an image
 
 	Save an image in a specific format in a separate directory 
-##Install Pillow
-We should change the format and size of these pictures, and rotate them by 90° clockwise. To do this, we'll use Python Imaging Library (PIL). Install pillow library using the following command:
-	pip3 install pillow
+## Install Pillow
 
-##Script file
+We should change the format and size of these pictures, and rotate them by 90° clockwise. To do this, we'll use Python Imaging Library (PIL). Install pillow library using the following command:
+```
+	pip3 install pillow
+```
+## Script file
 Edit script file
 ```
-nano convert_images.py
+	nano convert_images.py
 ```
 Add the folling lines:
 
@@ -54,11 +58,11 @@ for infile in file_list:
         except OSError:
             print("cannot convert", infile)
 ```
-Grant executable permission to the script file
+## Grant executable permission to the script file
 ```
-chmod +x convert_images.py
+	chmod +x convert_images.py
 ```
-Now, run the file.
+## Now, run the file.
 ```
-./convert_images.py
+	./convert_images.py
 ```
