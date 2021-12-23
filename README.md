@@ -30,8 +30,9 @@ Add the folling lines:
 import PIL
 import os, sys
 from PIL import Image
-dir="/home/nguyenpham/images"
-#new_dir="/home/nguyenpham/icons"
+
+dir="Images directory path"
+
 file_list=[]
 
 for filename in os.listdir(dir):
@@ -39,24 +40,19 @@ for filename in os.listdir(dir):
     # checking if it is a file
     if os.path.isfile(f):
         file_list.append(f)
-#print(file_list)
+
 for infile in file_list:
     f, e= os.path.splitext(infile)
-    #print(f)
-    #outfile=f.replace("images","icons")+"jpeg"
-    #print(outfile)
     outfile = os.path.splitext(infile)[0] + ".jpeg"
     outfile =  outfile.replace("images","icons")
-    #print(outfile)
     if infile != outfile:
         try:
             with Image.open(infile) as im:
-                #out=im.rotate(90).save(outfile)
-                #im.resize((128,128)).save(outfile)
-                #im.save(outfile)
+		#JPG do not support transparency, we have to convert to RGB to discard transparency first
                 im.convert("RGB").rotate(90).resize((128,128)).save(outfile,"JPEG")
         except OSError:
             print("cannot convert", infile)
+	    
 ```
 ## Grant executable permission to the script file
 ```
