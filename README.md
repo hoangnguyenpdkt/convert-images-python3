@@ -66,3 +66,5 @@ for infile in file_list:
 ```
 	./convert_images.py
 ```
+
+Copyright: Google IT Automation with Python Professional Certificate
