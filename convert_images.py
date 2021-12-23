@@ -16,6 +16,7 @@ for filename in os.listdir(dir):
 for infile in file_list:
     f, e= os.path.splitext(infile)
     outfile = os.path.splitext(infile)[0] + ".jpeg"
+    # Change the directory of the output from /directory/images to /directory/icons
     outfile =  outfile.replace("images","icons")
     if infile != outfile:
         try:
